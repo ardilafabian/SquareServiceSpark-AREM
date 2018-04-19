@@ -15,12 +15,8 @@ and open the template in the editor.
         Number:<br>
         <input type="text" name="number" id="number" value="0">
         <br>
-        Square:<br>
-        <input type="text" name="square">
         <br><br>
-        <input type="submit" id="submit" value="Submit">
+        <button type="submit" onclick="javascript:window.location.href='http://localhost:4567/square?num='+document.getElementById('number').value" id="submit">Submit</button>
     </center>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    <script src="js/SquareController.js">
 </body>
 </html>

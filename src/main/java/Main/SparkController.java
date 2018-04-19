@@ -7,6 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import spark.Request;
 import spark.Response;
+import spark.Spark;
 import static spark.Spark.*;
 
 /*
@@ -22,7 +23,7 @@ import static spark.Spark.*;
 public class SparkController {
     
     public static void main (String[] args) {
-        staticFileLocation("/public");
+        Spark.staticFiles.location("/public");
         get("/square", (Request req, Response res) -> {
             return getResponse(Integer.parseInt(req.queryParams("num")));
         });
