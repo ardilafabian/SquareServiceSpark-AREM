@@ -23,6 +23,7 @@ import static spark.Spark.*;
 public class SparkController {
     
     public static void main (String[] args) {
+        port(80);
         Spark.staticFiles.location("/public");
         get("/square", (Request req, Response res) -> {
             return getResponse(Integer.parseInt(req.queryParams("num")));
